@@ -182,6 +182,23 @@ img {
   transition: 0.5s ease-in;
   opacity: 1;
 }
+#context-menu {
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 10rem;
+  height: 5rem;
+}
+#context-menu ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+}
+#context-menu ul li {
+  text-align: center;
+}
 .main-navigation {
   width: 100%;
   height: 90px;
