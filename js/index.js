@@ -69,8 +69,14 @@ function showContextMenu(e){
     contextMenu.style = `top: ${e.clientY}px; left: ${e.clientX}px;`;
 }
 
-window.addEventListener("contextmenu", showContextMenu)
+function closeContextMenu(e){
+    contextMenu.classList.add("hidden");
+}
 
-window.addEventListener("copy", copyAnim)
+window.addEventListener("click", closeContextMenu);
+
+window.addEventListener("contextmenu", showContextMenu);
+
+window.addEventListener("copy", copyAnim);
 
 window.addEventListener("load", event => body.classList.replace("hidden", "fadeIn"));
