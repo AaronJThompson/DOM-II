@@ -114,6 +114,19 @@ function closeContextMenu(e){
     contextMenu.classList.add("hidden");
 }
 
+function changeToOffline(e){
+    onlineOffline.stlye = offlineCSS;
+    netStatus.innerText = "Offline!";
+    onlineOffline.classList.replace("hidden", "fadeIn");
+    setTimeout(() => onlineOffline.classList.replace("fadeIn", "hidden"), 1000);
+}
+
+function changeToOnline(e){
+    onlineOffline.style = onlineCSS;
+    netStatus.innerText = "Online!";
+    onlineOffline.classList.replace("hidden", "fadeIn");
+    setTimeout(() => onlineOffline.classList.replace("fadeIn", "hidden"), 1000);
+}
 window.addEventListener("click", closeContextMenu);
 
 window.addEventListener("contextmenu", showContextMenu);
@@ -121,3 +134,6 @@ window.addEventListener("contextmenu", showContextMenu);
 window.addEventListener("copy", copyAnim);
 
 window.addEventListener("load", event => body.classList.replace("hidden", "fadeIn"));
+
+window.addEventListener("online", changeToOnline);
+window.addEventListener("offline", changeToOffline);
