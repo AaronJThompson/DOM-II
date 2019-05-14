@@ -48,6 +48,19 @@ function copyAnim(e){
     copyPaste.classList.replace("hidden", "fadeIn");
     setTimeout(() => copyPaste.classList.replace("fadeIn", "hidden"), 1000);
 }
+
+const images = document.querySelectorAll("img");
+function scaleImage(e){
+    e.target.style = "transform: scale(1.1);";
+}
+function unScaleImage(e){
+    e.target.style = "";
+}
+images.forEach((item) => {
+    item.addEventListener("mouseover", scaleImage);
+    item.addEventListener("mouseout", unScaleImage);
+});
+
 window.addEventListener("copy", copyAnim)
 
 window.addEventListener("load", event => body.classList.replace("hidden", "fadeIn"));
