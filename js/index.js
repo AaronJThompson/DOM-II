@@ -26,7 +26,7 @@ const copyPaste = document.createElement("div");
 body.appendChild(copyPaste);
 let cpSpan = document.createElement("span");
 cpSpan.innerText = "Copied!";
-copyPaste.style = `width: 10%; 
+copyPaste.style = `width: 10rem; 
 height: 4rem; 
 border-radius: 5px; 
 background-color: lightgreen; 
