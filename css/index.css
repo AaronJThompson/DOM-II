@@ -174,6 +174,14 @@ img {
     margin: 0 5%;
   }
 }
+.hidden {
+  display: hidden;
+  opacity: 0;
+}
+.fadeIn {
+  transition: 0.5s ease-in;
+  opacity: 1;
+}
 .main-navigation {
   width: 100%;
   height: 90px;
