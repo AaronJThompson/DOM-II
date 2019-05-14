@@ -61,6 +61,16 @@ images.forEach((item) => {
     item.addEventListener("mouseout", unScaleImage);
 });
 
+const contextMenu = document.querySelector("#context-menu");
+function showContextMenu(e){
+    e.preventDefault();
+    contextMenu.classList.remove("hidden");
+    console.log(e);
+    contextMenu.style = `top: ${e.clientY}px; left: ${e.clientX}px;`;
+}
+
+window.addEventListener("contextmenu", showContextMenu)
+
 window.addEventListener("copy", copyAnim)
 
 window.addEventListener("load", event => body.classList.replace("hidden", "fadeIn"));

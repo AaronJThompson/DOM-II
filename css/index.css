@@ -187,6 +187,9 @@ img {
   border-radius: 5px;
   width: 10rem;
   height: 5rem;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
 }
 #context-menu ul {
   width: 100%;
