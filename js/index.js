@@ -115,7 +115,7 @@ function closeContextMenu(e){
 }
 
 function changeToOffline(e){
-    onlineOffline.stlye = offlineCSS;
+    onlineOffline.style = offlineCSS;
     netStatus.innerText = "Offline!";
     onlineOffline.classList.replace("hidden", "fadeIn");
     setTimeout(() => onlineOffline.classList.replace("fadeIn", "hidden"), 1000);
