@@ -22,4 +22,26 @@ window.addEventListener("scroll", e => {
     }
 })
 
+const copyPaste = document.createElement("div");
+body.appendChild(copyPaste);
+let cpSpan = document.createElement("span");
+cpSpan.innerText = "Copied!";
+copyPaste.style = `width: 10%; 
+height: 4rem; 
+border-radius: 5px; 
+background-color: lightgreen; 
+color: white; 
+position: fixed; 
+margin: 0 auto; 
+z-index: 99999; 
+top: 4%;
+left: 50%;
+transform: translate(-50%, 0);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem`;
+copyPaste.classList.add("hidden");
+copyPaste.appendChild(cpSpan);
+
 window.addEventListener("load", event => body.classList.replace("hidden", "fadeIn"));
