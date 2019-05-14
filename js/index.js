@@ -44,4 +44,10 @@ font-size: 2rem`;
 copyPaste.classList.add("hidden");
 copyPaste.appendChild(cpSpan);
 
+function copyAnim(e){
+    copyPaste.classList.replace("hidden", "fadeIn");
+    setTimeout(() => copyPaste.classList.replace("fadeIn", "hidden"), 1000);
+}
+window.addEventListener("copy", copyAnim)
+
 window.addEventListener("load", event => body.classList.replace("hidden", "fadeIn"));
