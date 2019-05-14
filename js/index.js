@@ -44,6 +44,47 @@ font-size: 2rem`;
 copyPaste.classList.add("hidden");
 copyPaste.appendChild(cpSpan);
 
+const onlineOffline = document.createElement("div");
+body.appendChild(onlineOffline);
+let netStatus = document.createElement("span");
+netStatus.innerText = "Offline";
+
+let offlineCSS = `width: 10rem; 
+height: 4rem; 
+border-radius: 5px; 
+background-color: red; 
+color: black; 
+position: fixed; 
+margin: 0 auto; 
+z-index: 99999; 
+top: 4%;
+left: 50%;
+transform: translate(-50%, 0);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem`;
+
+let onlineCSS = `width: 10rem; 
+height: 4rem; 
+border-radius: 5px; 
+background-color: green; 
+color: white; 
+position: fixed; 
+margin: 0 auto; 
+z-index: 99999; 
+top: 4%;
+left: 50%;
+transform: translate(-50%, 0);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem`;
+
+onlineOffline.style = offlineCSS;
+onlineOffline.classList.add("hidden");
+onlineOffline.appendChild(netStatus);
+
 function copyAnim(e){
     copyPaste.classList.replace("hidden", "fadeIn");
     setTimeout(() => copyPaste.classList.replace("fadeIn", "hidden"), 1000);
