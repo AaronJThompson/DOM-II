@@ -49,3 +49,35 @@ img {
     margin: 0 5%;
   }
 }
+
+.hidden{
+  display: none;
+  opacity: 0;
+}
+
+.fadeIn{
+  transition: 0.5s ease-in;
+  opacity: 1;
+}
+
+#context-menu{
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 10rem;
+  height: 5rem;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  ul{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+
+    li{
+      text-align: center;
+    }
+  }
+}
